@@ -7,7 +7,7 @@
 ![image](https://user-images.githubusercontent.com/77596290/202863296-31bb1a40-268f-409e-ab98-ffad224c5299.png)
 ![image](https://user-images.githubusercontent.com/77596290/202863307-4a4567ec-adf4-4e82-887f-0c9b9a46bd0f.png)
 
-compare two tables where one table (top) represents a model with only three layers and controlled the number of neurons in the second layer and the other table (bottom) represens a model with 4 layers and controlled the number of neurons in the forth layer
+compare two tables where one table (left) represents a model with only three layers and controlled the number of neurons in the second layer and the other table (right) represens a model with 4 layers and controlled the number of neurons in the forth layer
 - the model with more layers is slightly more accurate than the model with less layers
 - as number of neurons increases, the accuracy tends to be higher; however, when the number of neurons is larger enough, there do not seem be that much difference and obvious trend for accuracy.
 

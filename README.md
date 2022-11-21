@@ -14,13 +14,17 @@ CNN have two extra convolution and pooling layers and others remain the same.
 
 ![image](https://user-images.githubusercontent.com/77596290/202863296-31bb1a40-268f-409e-ab98-ffad224c5299.png)
 *change the number of neurons in first dense layer for plain vanilla model with 3 layers*
+
 ![image](https://user-images.githubusercontent.com/77596290/202863307-4a4567ec-adf4-4e82-887f-0c9b9a46bd0f.png)
 *change the number of neurons in second dense layer for plain vanilla model with 4 layers*
 
+
 ![image](https://user-images.githubusercontent.com/77596290/202951821-9c2facab-bd79-4e2b-9212-4341cd01bb38.png)
 *change the number of neurons in first dense layer for CNN*
+
 ![image](https://user-images.githubusercontent.com/77596290/202953633-18fae1dd-a351-4ce6-bd52-3791c264d1a8.png)
 *change the number of neurons in second dense layer for CNN*
+
 
 compare two tables where one table (left) represents a model with only three layers and controlled the number of neurons in the second layer and the other table (right) represens a model with 4 layers and controlled the number of neurons in the forth layer
 - the model with more layers is slightly more accurate than the model with less layers

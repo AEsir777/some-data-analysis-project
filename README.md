@@ -39,9 +39,17 @@ uses matplotlib to convert the data into graphs
 
 # image-recognition
 ## conclusion
-implement **image augmentation** and **dropout** for dog and cat dataset
-For relatively large epoches (1-100), the traning and validation accuracy is still increasing, so these two methods effectively avoid **overfitting**
+implement **image augmentation** and **dropout**
+For flower dataset: apply
+randomWidth/Height = 0.15, horizontal RandomFlip, 45\degree RandomRotation, 50% RandomZoom, Dropout=0.2
+![image](https://user-images.githubusercontent.com/77596290/204006200-1a292407-a8c4-456f-81a8-cb3b36293f77.png)
+- the training loss begin to increase after 40 epochs, so overfitting did have effect on the accuracy for the validation set
+
+For dog and cat dataset: apply
+Horizontal and vertical RandomFlip, 36\degree RandomRotation, 20% RandomZoom, 0.5 Dropout
 ![image](https://user-images.githubusercontent.com/77596290/203888888-f261bdd2-d2b9-4f95-a142-505a113ee918.png)
+- For relatively large epoches (1-100), the traning and validation accuracy is still increasing, so these two methods effectively avoid **overfitting**
+
 
 
 # R

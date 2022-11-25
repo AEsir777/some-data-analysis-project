@@ -1,5 +1,5 @@
 # Keras parameter study
-## conclusion (tested on plain vanilla and CNN model)
+## conclusion (tested on **plain vanilla** and **CNN** model)
 CNN have two extra convolution and pooling layers and others remain the same.
 
 ![image](https://user-images.githubusercontent.com/77596290/202949015-05f37562-48f4-467d-bbdc-5fca0fd1fab6.png)
@@ -38,8 +38,10 @@ contains kaggle for ai_village_challenge uses numpy, pandas, scikit-learn for cl
 uses matplotlib to convert the data into graphs
 
 # image-recognition
-uses Keras and Tensor flow to build the model and analyze images and data
-![image](https://user-images.githubusercontent.com/77596290/196324599-8ec2eaa9-59c9-4d6e-a8a6-f8b70cfc3866.png)
+## conclusion
+implement **image augmentation** and **dropout** for dog and cat dataset
+For relatively large epoches (1-100), the traning and validation accuracy is still increasing, so these two methods effectively avoid **overfitting**
+![image](https://user-images.githubusercontent.com/77596290/203888888-f261bdd2-d2b9-4f95-a142-505a113ee918.png)
 
 
 # R

@@ -33,10 +33,24 @@ compare two tables where one table (left) represents a model with only three lay
 
 # ctf
 contains kaggle for ai_village_challenge uses numpy, pandas, scikit-learn for classification, clustering, dimention reduction.  
-  
-# game_attributes_compare
-uses matplotlib to convert the data into graphs
 
+# transfer learning
+## compare mobilenet_v2, inception_v3 transfer learning for flower dataset
+condition: epoches = 6, only add a Dense layer, 7/3 train/validation
+![image](https://user-images.githubusercontent.com/77596290/204699775-b58f1d9d-00d2-4d9c-8852-2f5264b8fe07.png)
+*mobilenet_v2 accuracy(epoches 6) = 0.9494(train)/0.9083(validation)*
+
+![image](https://user-images.githubusercontent.com/77596290/204699889-01de2099-e617-4297-9cdf-24fe20f98cec.png)
+*inception_v3 accuracy(epoches 6) = 0.9354(train)/0.9010(validation)*
+
+- **mobilenet_v2** fits the flower dataset bettern than **inception_v3**
+reason for val accuracy exceeds training accuracy at the first epoch:
+- training accuracy is measured during the epoch, however validation accuracy is only measured at the end of the epoch
+- the model is **pre-trained** on flower images 
+- there might be **image augmentation** layers for training dataset but not for validation dataset so the training data is harder to classify
+
+
+<br />
 # image-recognition
 ## conclusion
 implement **image augmentation** and **dropout** <br />
@@ -51,8 +65,6 @@ Horizontal and vertical RandomFlip, 36&deg; RandomRotation, 20% RandomZoom, 0.5 
 
 ![image](https://user-images.githubusercontent.com/77596290/203888888-f261bdd2-d2b9-4f95-a142-505a113ee918.png)
 - For relatively large epoches (1-100), the traning and validation accuracy is still increasing, so these two methods effectively avoid **overfitting**
-
-
 
 # R
 some basic R usage

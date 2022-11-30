@@ -48,9 +48,7 @@ reason for val accuracy exceeds training accuracy at the first epoch:
 - training accuracy is measured during the epoch, however validation accuracy is only measured at the end of the epoch
 - the model is **pre-trained** on flower images 
 - there might be **image augmentation** layers for training dataset but not for validation dataset so the training data is harder to classify
-
-
-<br />
+- 
 # image-recognition
 ## conclusion
 implement **image augmentation** and **dropout** <br />

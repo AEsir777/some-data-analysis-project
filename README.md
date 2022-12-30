@@ -1,3 +1,25 @@
+# time series forecasting
+## tested on only 1 layer (linear model) and with 2 extra dense layers
+target: a linear time series with trend, seanality and some noise
+### change the learning rate acorrding to epochs
+
+![image](https://user-images.githubusercontent.com/77596290/210108084-b23a3eb0-97ff-4bbc-a4cc-c03f307a372c.png)
+*learning rate vs. loss for linear model*
+
+![image](https://user-images.githubusercontent.com/77596290/210108104-4faebdd9-0b9d-40a5-85dc-51b085de28b0.png)
+*learning rate vs. loss for more complex model*
+
+- more complex model approches minumum faster than the linear model
+- but they both behave equally well around learning rate = $10^{-4}$
+
+### apply early stopping
+|  target          |   linear model   |   model with 2 extra dense layers |
+| :-----:          | :---:            | :---:                             |
+|   mae            |   4.935261       |   160                             |
+|stopping epoches  |   5.4686675      |   62                              |
+- unsurprisingly, linear model performances bettern since the time series is meant to be linear
+- more complex model stops earlier than linear model also because complex model is more likely to lead to overfitting
+
 # Keras parameter study
 ## conclusion (tested on **plain vanilla** and **CNN** model)
 CNN have two extra convolution and pooling layers and others remain the same.

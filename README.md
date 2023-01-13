@@ -1,4 +1,15 @@
 # time series forecasting
+## compare sequence-to-vector RNN and sequence-to-sequence RNN
+|  RNN model          |   sequence-to-vector   |   sequence-to-sequence |
+| :-----:          | :---:            | :---:                             |
+| best learning rate |  $3 \times 10^{-6}$ | $2 \times 10^{-6}$ |
+|   MAE            |   7.2522078       |   5.2465625                             |
+|stopping epoches  |   174      |   455                              |
+- sequence-to-sequence RNN performes weight better than  the sequence-to-vector RNN for time series
+- sequence-to-vector RNN performes very bad when there is a large change in the trend of the time series  
+   
+  
+
 ## tested on only 1 layer (linear model) and with 2 extra dense layers
 target: a linear time series with trend, seanality and some noise
 ### change the learning rate acorrding to epochs
@@ -15,8 +26,8 @@ target: a linear time series with trend, seanality and some noise
 ### apply early stopping
 |  target          |   linear model   |   model with 2 extra dense layers |
 | :-----:          | :---:            | :---:                             |
-|   mae            |   4.935261       |   160                             |
-|stopping epoches  |   5.4686675      |   62                              |
+|   mae            |   4.935261       |   5.4686675                           |
+|stopping epoches  |   160   |   62                             |
 - unsurprisingly, linear model performances bettern since the time series is meant to be linear
 - more complex model stops earlier than linear model also because complex model is more likely to lead to overfitting
 

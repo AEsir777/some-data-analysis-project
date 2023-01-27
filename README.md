@@ -1,12 +1,13 @@
 # time series forecasting
-## compare sequence-to-vector RNN and sequence-to-sequence RNN (and stateful sequence-to-sequence RNN)
-|  RNN model          |   sequence-to-vector   |   sequence-to-sequence | stateful |
-| :-----:          | :---:            | :---:                             | :---: |
-| best learning rate |  $3 \times 10^{-6}$ | $2 \times 10^{-6}$ | $1 \times 10^{-6}$
-|   MAE            |   7.2522078       |   5.2465625    | 5.9912305                        | 
-|stopping epoches  |   174      |   455                              |  129 |
+## compare sequence-to-vector RNN / sequence-to-sequence RNN / stateful sequence-to-sequence RNN / LSTM Cell
+|  RNN model          |   sequence-to-vector   |   sequence-to-sequence | stateful | LSTM |
+| :-----:          | :---:            | :---:                             | :---: | :---:|
+| best learning rate |  $3 \times 10^{-6}$ | $2 \times 10^{-6}$ | $1 \times 10^{-6}$ | $3 \times 10^{-7}$ |
+|   MAE            |   7.2522078       |   5.2465625    | 5.9912305                        | 5.4648457 |
+|stopping epoches  |   174      |   455                              |  129 | 113|
 - sequence-to-sequence RNN performes weight better than  the sequence-to-vector RNN for time series
 - sequence-to-vector RNN performes very bad when there is a large change in the trend of the time series  
+- LSTM performs similar to sequence-to-vector but with the highest efficiency and lowest best learning rate
    
   
 

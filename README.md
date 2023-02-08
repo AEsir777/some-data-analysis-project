@@ -1,6 +1,15 @@
 # NLP
-model using embedding and textVectorization layer
+model using embedding and textVectorization layer  
+- vocabulary_size = 1000
+- sequence_length = 100
+- use flatten layer after embedding layer
 ![image](https://user-images.githubusercontent.com/77596290/217428943-7c110b06-b6ef-41ee-9f5a-e579a423de10.png)
+
+- vocabulary_size = 500
+- sequence_length = 50
+- use globalAveragePool1D layer after embedding layer
+![image](https://user-images.githubusercontent.com/77596290/217437590-7c9854ff-7480-4205-8bdb-9154e7c33c21.png)
+
 
 
 # time series forecasting

@@ -1,3 +1,8 @@
+# NLP
+model using embedding and textVectorization layer
+![image](https://user-images.githubusercontent.com/77596290/217428943-7c110b06-b6ef-41ee-9f5a-e579a423de10.png)
+
+
 # time series forecasting
 ## compare sequence-to-vector RNN / sequence-to-sequence RNN / stateful sequence-to-sequence RNN / LSTM Cell / CNN
 |  RNN model          |   sequence-to-vector   |   sequence-to-sequence | stateful | LSTM | LSTM with Conv1D as Preprocessing | WaveNet

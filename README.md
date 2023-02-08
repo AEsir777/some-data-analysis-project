@@ -1,17 +1,3 @@
-# NLP
-model using embedding and textVectorization layer  
-- vocabulary_size = 1000
-- sequence_length = 100
-- use flatten layer after embedding layer
-![image](https://user-images.githubusercontent.com/77596290/217428943-7c110b06-b6ef-41ee-9f5a-e579a423de10.png)
-
-- vocabulary_size = 500
-- sequence_length = 50
-- use globalAveragePool1D layer after embedding layer
-![image](https://user-images.githubusercontent.com/77596290/217437590-7c9854ff-7480-4205-8bdb-9154e7c33c21.png)
-
-
-
 # time series forecasting
 ## compare sequence-to-vector RNN / sequence-to-sequence RNN / stateful sequence-to-sequence RNN / LSTM Cell / CNN
 |  RNN model          |   sequence-to-vector   |   sequence-to-sequence | stateful | LSTM | LSTM with Conv1D as Preprocessing | WaveNet
@@ -47,6 +33,21 @@ target: a linear time series with trend, seanality and some noise
 |stopping epoches  |   160   |   62                             |
 - unsurprisingly, linear model performances bettern since the time series is meant to be linear
 - more complex model stops earlier than linear model also because complex model is more likely to lead to overfitting
+
+# NLP
+model using embedding and textVectorization layer  
+- vocabulary_size = 1000
+- sequence_length = 100
+- use flatten layer after embedding layer
+![image](https://user-images.githubusercontent.com/77596290/217428943-7c110b06-b6ef-41ee-9f5a-e579a423de10.png)
+
+- vocabulary_size = 500
+- sequence_length = 50
+- use globalAveragePool1D layer after embedding layer
+![image](https://user-images.githubusercontent.com/77596290/217437590-7c9854ff-7480-4205-8bdb-9154e7c33c21.png)
+
+- using subwords and TensorBoardPlugin
+![image](https://user-images.githubusercontent.com/77596290/217669877-45707be3-2c7f-4916-b4b4-81a1efd87105.png)
 
 # Keras parameter study
 ## conclusion (tested on **plain vanilla** and **CNN** model)

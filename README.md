@@ -35,6 +35,20 @@ target: a linear time series with trend, seanality and some noise
 - more complex model stops earlier than linear model also because complex model is more likely to lead to overfitting
 
 # NLP
+## compare RNN and dense models for sentiment analysis
+- both used subwords embedding  
+- embeding dimention = 16  
+![image](https://user-images.githubusercontent.com/77596290/218290744-2e26f4e4-85ee-48db-8fa6-b7be38734b14.png)
+*dense model*  
+
+![image](https://user-images.githubusercontent.com/77596290/218290766-3e598940-91a6-4d21-a972-1f946b6e5bb2.png)
+*RNN model with 1 bidirectional LSTM layer*  
+
+![image](https://user-images.githubusercontent.com/77596290/218290783-45d08801-c65a-429b-9b58-e4cb24eabc8e.png)
+*RNN model with 2 bidirectional LSTM layers*  
+- LSTM layer performed visibly better than plain model  
+- adding 1 more LSTM layer does not increase the accuracy  
+
 model using embedding and textVectorization layer  
 - vocabulary_size = 1000
 - sequence_length = 100

@@ -38,17 +38,19 @@ target: a linear time series with trend, seanality and some noise
 ## compare RNN and dense models for sentiment analysis
 - both used subwords embedding  
 - embeding dimention = 16  
-![image](https://user-images.githubusercontent.com/77596290/218290744-2e26f4e4-85ee-48db-8fa6-b7be38734b14.png)
-*dense model*  
+- the first layer is embedding layer
+- there is only dense layer which is the last layer
 
-![image](https://user-images.githubusercontent.com/77596290/218290766-3e598940-91a6-4d21-a972-1f946b6e5bb2.png)
-*RNN model with 1 bidirectional LSTM layer*  
+|  model          |  embedding model    |   CNN | GRU | LSTM | multilayer LSTM |
+| :-----:          | :---:            | :---: | :---: | :---: | :---: |
+|   specific layer   |   GlobalAveragePooling1D       |   Conv1D and GlobalAveragePooling1D | GRU(32) | LSTM(16) | double LSTM(16) |
+|   learning rate   |   0.0001       |   0.0001                | 0.00005 | 0.00005 | 0.00005 | 
+| validation accuracy (max) |   0.77   |   0.75     | 0.76 | 0.78 | 0.77 | 0.76 |
+| mse on test dataset |   0.37773073   |   0.40608215    | 0.40457442 | 0.38270417 |0.45821545|
+- since the test set only contains simple sentences that does not depend on words that are far from the key words, plain embedding model performs the best while multilayer LSTM is penalitied for overfitting  
+- the validation set contains context that are harder to analyze, so LSTM performs the best
 
-![image](https://user-images.githubusercontent.com/77596290/218290783-45d08801-c65a-429b-9b58-e4cb24eabc8e.png)
-*RNN model with 2 bidirectional LSTM layers*  
-- LSTM layer performed visibly better than plain model  
-- adding 1 more LSTM layer does not increase the accuracy  
-
+## explore tensorboard
 model using embedding and textVectorization layer  
 - vocabulary_size = 1000
 - sequence_length = 100
